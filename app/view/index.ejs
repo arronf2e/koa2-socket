@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>koa socket</title>
+</head>
+<body>
+	<h1><%= title %></h1>
+	<h2 id="test"></h2>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+	<script>
+		var socket = io();
+		socket.on('test', data => {
+			document.getElementById('test').innerHTML = data.count;
+		})
+	</script>
+</body>
+</html>
